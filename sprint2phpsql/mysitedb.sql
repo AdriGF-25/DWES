@@ -75,11 +75,11 @@ LOCK TABLES `juegos` WRITE;
 /*!40000 ALTER TABLE `juegos` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `juegos` VALUES
-(1,'dredge','https://upload.wikimedia.org/wikipedia/en/0/09/Dredge_cover_art.jpg','pc, consolas','2023-03-23'),
-(2,'horizon forbidden west','https://upload.wikimedia.org/wikipedia/en/8/87/Horizon_Forbidden_West_cover_art.jpg','playstation 4, playstation 5','2022-02-18'),
-(3,'dragon ball sparking zero','https://upload.wikimedia.org/wikipedia/en/f/fb/Dragon_Ball_Sparking_Zero_cover.jpg','gamecube','2003-11-13'),
-(4,'minecraft','https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Minecraft_cover.png/220px-Minecraft_cover.png','multi-plataforma','2011-11-18'),
-(5,'ghost of tsushima','https://upload.wikimedia.org/wikipedia/en/a/a9/Ghost_of_Tsushima_Cover_Art.jpg','playstation 4','2020-07-17');
+(1,'dredge','https://image.api.playstation.com/vulcan/ap/rnd/202302/0216/519d1449f3f87943aa0789b9a9e133b4d517c993f8e0b226.jpg','pc, consolas','2023-03-23'),
+(2,'horizon forbidden west','https://www.xtrafondos.com/wallpapers/vertical/horizon-ii-forbidden-west-9737.jpg','playstation 4, playstation 5','2022-02-18'),
+(3,'dragon ball sparking zero','https://image.api.playstation.com/vulcan/ap/rnd/202405/2216/6dbecd42a82245c34688d6ac2d16bf403c7c8b9249183232.png','PlayStation 5','2023-11-13'),
+(4,'minecraft','https://upload.wikimedia.org/wikipedia/commons/f/fb/Minecraft-creeper-face.jpg','multi-plataforma','2011-11-18'),
+(5,'ghost of tsushima','https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/29a8e4102363089.5f35f6dc29e5f.png','playstation 4','2020-07-17');
 /*!40000 ALTER TABLE `juegos` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -109,11 +109,11 @@ LOCK TABLES `libros` WRITE;
 /*!40000 ALTER TABLE `libros` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `libros` VALUES
-(1,'el juego de ender','https://upload.wikimedia.org/wikipedia/en/7/7e/Ender%27s_Game_novel_cover.jpg','orson scott card',1985),
-(2,'ready player one','https://upload.wikimedia.org/wikipedia/en/a/a4/Ready_Player_One_cover.jpg','ernest cline',2011),
-(3,'la sombra del viento','https://upload.wikimedia.org/wikipedia/en/4/4b/La_sombra_del_viento.jpg','carlos ruiz zafón',2001),
-(4,'neuromante','https://upload.wikimedia.org/wikipedia/en/4/4b/Neuromancer_%28book_cover%29.jpg','william gibson',1984),
-(5,'sapiens','https://upload.wikimedia.org/wikipedia/en/8/88/Sapiens_A_Brief_History_of_Humankind.jpg','yuval noah harari',2011);
+(1,'el juego de ender','https://images.cdn3.buscalibre.com/fit-in/360x360/b0/59/b059dceef929daf43f42be5d29ec5443.jpg','orson scott card',1985),
+(2,'ready player one','https://m.media-amazon.com/images/I/714qeTmyeyL._AC_UF1000,1000_QL80_.jpg','ernest cline',2011),
+(3,'la sombra del viento','https://m.media-amazon.com/images/I/61ZSuWFzQRL.jpg','carlos ruiz zafón',2001),
+(4,'neuromante','https://www.ccyberdark.net/wp-content/uploads/2021/05/Neuromancer.jpeg','william gibson',1984),
+(5,'sapiens','https://m.media-amazon.com/images/I/811PTyrckTL.jpg','yuval noah harari',2011);
 /*!40000 ALTER TABLE `libros` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
