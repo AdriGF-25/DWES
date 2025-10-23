@@ -49,7 +49,7 @@
      <br>
      '.$row[1].'
      <br>
-     <a href=""><img src='.$row[2].'></a>
+     <a href="http://localhost:8083/detail.php?id='.$row[0].'"><img src='.$row[2].'></a>
      <br>
      '.$row[3].'
      <br>
