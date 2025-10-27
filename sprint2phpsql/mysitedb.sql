@@ -76,7 +76,7 @@ LOCK TABLES `juegos` WRITE;
 set autocommit=0;
 INSERT INTO `juegos` VALUES
 (1,'dredge','https://image.api.playstation.com/vulcan/ap/rnd/202302/0216/519d1449f3f87943aa0789b9a9e133b4d517c993f8e0b226.jpg','pc, consolas','2023-03-23'),
-(2,'horizon forbidden west','https://www.xtrafondos.com/wallpapers/vertical/horizon-ii-forbidden-west-9737.jpg','playstation 4, playstation 5','2022-02-18'),
+(2,'horizon forbidden west','','playstation 4, playstation 5','2022-02-18'),
 (3,'dragon ball sparking zero','https://image.api.playstation.com/vulcan/ap/rnd/202405/2216/6dbecd42a82245c34688d6ac2d16bf403c7c8b9249183232.png','PlayStation 5','2023-11-13'),
 (4,'minecraft','https://upload.wikimedia.org/wikipedia/commons/f/fb/Minecraft-creeper-face.jpg','multi-plataforma','2011-11-18'),
 (5,'ghost of tsushima','https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/29a8e4102363089.5f35f6dc29e5f.png','playstation 4','2020-07-17');

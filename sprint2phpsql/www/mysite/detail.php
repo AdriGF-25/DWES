@@ -22,8 +22,15 @@ $result2 = mysqli_query($db, $query2) or die('Query error');
 while ($row = mysqli_fetch_array($result2)) {
 echo '<li>'.$row['comentario'].'</li>';
 }
-mysqli_close($db);
 ?>
+<p>Deja un nuevo comentario:</p>
+<form action="/comment.php" method="post">
+<textarea rows="4" cols="50" name="new_comment"></textarea><br>
+<input type="hidden" name="libros_id" value="<?php echo $id; ?>">
+<input type="submit" value="Comentar">
+</form>
 </ul>
+<?php mysqli_close($db);
+?>
 </body>
 </html>
