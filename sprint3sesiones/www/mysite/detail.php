@@ -31,6 +31,7 @@ echo '<li>'.$row['comentario'].' <span> '.$row['fecha'] .'</span></li>';
 <input type="submit" value="Comentar">
 </form>
 </ul>
+<a href="/logout.php">Logout</a>
 <?php mysqli_close($db);
 ?>
 </body>

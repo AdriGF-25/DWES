@@ -64,7 +64,6 @@ mysqli_close($db);
 
 <hr>
 <hr>
-
-
+<a href="/logout.php">Logout</a>
 </body>
 </html>
