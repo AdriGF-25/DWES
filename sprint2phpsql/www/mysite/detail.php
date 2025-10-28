@@ -21,7 +21,7 @@ echo '<h2>'.$only_row['año_publicacion'].'</h2>';
 $query2 = 'SELECT * FROM comentarios WHERE libro_id='.$id;
 $result2 = mysqli_query($db, $query2) or die('Query error');
 while ($row = mysqli_fetch_array($result2)) {
-echo '<li>'.$row['comentario'].'</li>';
+echo '<li>'.$row['comentario'].' <span> '.$row['fecha'] .'</span></li>';
 }
 ?>
 <p>Deja un nuevo comentario:</p>

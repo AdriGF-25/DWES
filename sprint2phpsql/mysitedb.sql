@@ -28,10 +28,11 @@ CREATE TABLE `comentarios` (
   `comentario` varchar(2000) DEFAULT NULL,
   `libro_id` int(11) NOT NULL,
   `usuario_id` int(11) DEFAULT NULL,
+  `fecha` timestamp NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   KEY `libro_id` (`libro_id`),
   CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`libro_id`) REFERENCES `libros` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,16 +43,19 @@ LOCK TABLES `comentarios` WRITE;
 /*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `comentarios` VALUES
-(1,'una lectura fascinante sobre estrategia y liderazgo.',1,NULL),
-(2,'un homenaje a la cultura pop y los años 80.',2,NULL),
-(3,'una historia envolvente en la barcelona gótica.',3,NULL),
-(4,'pionero del cyberpunk con una visión futurista.',4,NULL),
-(5,'una reflexión profunda sobre la historia de la humanidad.',5,NULL),
-(6,'asd',1,NULL),
-(7,'dsfgadsfvfd',1,NULL),
-(8,'prueba 911',1,NULL),
-(9,'asdf',1,NULL),
-(10,'comentario prueba',2,NULL);
+(1,'una lectura fascinante sobre estrategia y liderazgo.',1,NULL,'2025-10-28 11:02:53'),
+(2,'un homenaje a la cultura pop y los años 80.',2,NULL,'2025-10-28 11:02:53'),
+(3,'una historia envolvente en la barcelona gótica.',3,NULL,'2025-10-28 11:02:53'),
+(4,'pionero del cyberpunk con una visión futurista.',4,NULL,'2025-10-28 11:02:53'),
+(5,'una reflexión profunda sobre la historia de la humanidad.',5,NULL,'2025-10-28 11:02:53'),
+(6,'asd',1,NULL,'2025-10-28 11:02:53'),
+(7,'dsfgadsfvfd',1,NULL,'2025-10-28 11:02:53'),
+(8,'prueba 911',1,NULL,'2025-10-28 11:02:53'),
+(9,'asdf',1,NULL,'2025-10-28 11:02:53'),
+(10,'comentario prueba',2,NULL,'2025-10-28 11:02:53'),
+(11,'polno ¿? pofi',1,NULL,'2025-10-28 11:02:53'),
+(12,'por fin va',1,NULL,'2025-10-28 11:02:53'),
+(13,'polno yes ',2,NULL,'2025-10-28 11:08:43');
 /*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -133,4 +137,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-10-28 10:59:01
+-- Dump completed on 2025-10-28 12:10:45
