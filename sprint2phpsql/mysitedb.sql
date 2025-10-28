@@ -27,10 +27,11 @@ CREATE TABLE `comentarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `comentario` varchar(2000) DEFAULT NULL,
   `libro_id` int(11) NOT NULL,
+  `usuario_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `libro_id` (`libro_id`),
   CONSTRAINT `comentarios_ibfk_1` FOREIGN KEY (`libro_id`) REFERENCES `libros` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_uca1400_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,11 +42,16 @@ LOCK TABLES `comentarios` WRITE;
 /*!40000 ALTER TABLE `comentarios` DISABLE KEYS */;
 set autocommit=0;
 INSERT INTO `comentarios` VALUES
-(1,'una lectura fascinante sobre estrategia y liderazgo.',1),
-(2,'un homenaje a la cultura pop y los años 80.',2),
-(3,'una historia envolvente en la barcelona gótica.',3),
-(4,'pionero del cyberpunk con una visión futurista.',4),
-(5,'una reflexión profunda sobre la historia de la humanidad.',5);
+(1,'una lectura fascinante sobre estrategia y liderazgo.',1,NULL),
+(2,'un homenaje a la cultura pop y los años 80.',2,NULL),
+(3,'una historia envolvente en la barcelona gótica.',3,NULL),
+(4,'pionero del cyberpunk con una visión futurista.',4,NULL),
+(5,'una reflexión profunda sobre la historia de la humanidad.',5,NULL),
+(6,'asd',1,NULL),
+(7,'dsfgadsfvfd',1,NULL),
+(8,'prueba 911',1,NULL),
+(9,'asdf',1,NULL),
+(10,'comentario prueba',2,NULL);
 /*!40000 ALTER TABLE `comentarios` ENABLE KEYS */;
 UNLOCK TABLES;
 commit;
@@ -76,7 +82,7 @@ LOCK TABLES `juegos` WRITE;
 set autocommit=0;
 INSERT INTO `juegos` VALUES
 (1,'dredge','https://image.api.playstation.com/vulcan/ap/rnd/202302/0216/519d1449f3f87943aa0789b9a9e133b4d517c993f8e0b226.jpg','pc, consolas','2023-03-23'),
-(2,'horizon forbidden west','','playstation 4, playstation 5','2022-02-18'),
+(2,'horizon forbidden west','https://www.xtrafondos.com/wallpapers/vertical/horizon-ii-forbidden-west-9737.jpg','playstation 4, playstation 5','2022-02-18'),
 (3,'dragon ball sparking zero','https://image.api.playstation.com/vulcan/ap/rnd/202405/2216/6dbecd42a82245c34688d6ac2d16bf403c7c8b9249183232.png','PlayStation 5','2023-11-13'),
 (4,'minecraft','https://upload.wikimedia.org/wikipedia/commons/f/fb/Minecraft-creeper-face.jpg','multi-plataforma','2011-11-18'),
 (5,'ghost of tsushima','https://mir-s3-cdn-cf.behance.net/project_modules/hd_webp/29a8e4102363089.5f35f6dc29e5f.png','playstation 4','2020-07-17');
@@ -127,4 +133,4 @@ commit;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2025-10-08 12:51:38
+-- Dump completed on 2025-10-28 10:59:01

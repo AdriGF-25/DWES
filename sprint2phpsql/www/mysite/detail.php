@@ -13,6 +13,7 @@ $result = mysqli_query($db, $query) or die('Query error');
 $only_row = mysqli_fetch_array($result);
 echo '<h1>'.$only_row['nombre'].'</h1>';
 echo '<h2>'.$only_row['año_publicacion'].'</h2>';
+
 ?>
 <h3>Comentarios:</h3>
 <ul>
@@ -24,9 +25,9 @@ echo '<li>'.$row['comentario'].'</li>';
 }
 ?>
 <p>Deja un nuevo comentario:</p>
-<form action="/comment.php" method="post">
+<form action="./comment.php" method="post">
 <textarea rows="4" cols="50" name="new_comment"></textarea><br>
-<input type="hidden" name="libros_id" value="<?php echo $id; ?>">
+<input type="hidden" name="libro_id" value="<?php echo $id; ?>">
 <input type="submit" value="Comentar">
 </form>
 </ul>
