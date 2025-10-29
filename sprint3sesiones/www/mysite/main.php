@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mariadb</title>
-  <style>
-    h1{
-      text-align: center;
-      text-transform: uppercase; 
-    }
+<meta charset="utf-8">
+<title>Main</title>
+<style>
+.item {
+  transition: opacity 0.5s ease, transform 0.3s ease;
+}
+
+.item:hover {
+  opacity: 0.7;
+  transform: scale(1.03);
+}
+body {
+  background: linear-gradient(180deg,#f7fbff,#ffffff);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+  h1{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  color: #155;
+}
 
     .item {
       margin: 10px;
@@ -30,6 +45,24 @@
       border: 2px solid lightgreen;
       
     }
+    
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #bfe6c8, transparent);
+  margin: 18px 0;
+}
+
+a[href="/logout.php"] {
+  display: inline-block;
+  margin-top: 16px;
+  color: #0a5;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: rgba(10,170,90,0.06);
+  transition: background 180ms ease, transform 180ms ease;
+}
   </style>
 </head>
 <body>
@@ -44,6 +77,7 @@
   $query = 'SELECT * FROM libros';
   $result = mysqli_query($db, $query) or die('Query error');
   while ($row = mysqli_fetch_array($result)) {
+    
     echo '<div class="item">
      '.$row[0].'
      <br>
@@ -65,5 +99,18 @@ mysqli_close($db);
 <hr>
 <hr>
 <a href="/logout.php">Logout</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var lists = document.querySelectorAll('ul, ol');
+  lists.forEach(function(l){
+    l.classList.add('animated-list');
+    Array.from(l.children).forEach(function(li){
+      li.classList.add('animated-fade');
+    });
+  });
+});
+</script>
+
 </body>
 </html>
