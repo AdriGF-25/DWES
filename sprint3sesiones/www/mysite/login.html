@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-<head><meta charset="UTF-8"></head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script>
+function validateLogin() {
+  var form = document.forms['loginForm'];
+  var email = (form['f_email'].value || '').trim();
+  var pass = form['f_password'].value || '';
+  if (email === '' || pass === '') {
+    alert('Por favor, rellena todos los campos.');
+    return false;
+  }
+  return true;
+}
+</script>
 </head>
 <body>
 <h1>Login</h1>
-<form action="login.php" method="post">
+<form name="loginForm" action="login.php" method="post" onsubmit="return validateLogin()">
 <input name="f_email" type="text" placeholder="e-mail"><br>
 <input name="f_password" type="password" placeholder="Contraseña"><br>
 <input type="submit" value="Iniciar sesión">
