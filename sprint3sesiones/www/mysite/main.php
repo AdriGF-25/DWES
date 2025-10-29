@@ -84,7 +84,7 @@ a[href="/logout.php"] {
      '.$row[1].'
      <br>
      <a href="http://localhost:8084/detail.php?id='.$row[0].'"><img src='.$row[2].'></a>
-     <br>
+     <br>S
      '.$row[3].'
      <br>
      '.$row[4].'
