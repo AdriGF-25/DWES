@@ -1,7 +1,8 @@
-
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
-from .models import Libros
+from django.views.decorators.csrf import csrf_exempt
+from .models import Libros, Comentarios
+import json
 
 #  Create your views here.
 
@@ -35,3 +36,16 @@ def devolver_libros_por_id(request, id_solicitado):
                 'comentarios': lista_comentarios
         }
         return JsonResponse(resultado, json_dumps_params={'ensure_ascii': False})
+
+@csrf_exempt
+def guardar_comentario(request, cancion_id):
+	if request.method != 'POST':
+		return None
+	json_peticion = json.loads(request.body)
+
+	new_comment= Comentarios(
+	new_comment = json_peticion['nuevo Comentario'],
+	libro= Libros.objects.get(id=libro_id)
+	)
+	new_comment.save()
+	return JsonResponse({"status": "ok"})
