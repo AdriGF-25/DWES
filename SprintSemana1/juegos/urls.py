@@ -1,8 +1,11 @@
-from django.urls import path
-from .views import ConsolaListAPIView, ConsolaDetailAPIView, JuegoListCreateAPIView
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import ConsolaViewSet, JuegoViewSet
+
+router = DefaultRouter()
+router.register(r'consolas', ConsolaViewSet, basename='consola')
+router.register(r'juegos', JuegoViewSet, basename='juego')
 
 urlpatterns = [
-    path('api/consolas/', ConsolaListAPIView.as_view(), name='consola-list'),
-    path('api/consolas/<int:pk>/', ConsolaDetailAPIView.as_view(), name='consola-detail'),
-    path('api/juegos/', JuegoListCreateAPIView.as_view(), name='juego-list'),
+    path('api/', include(router.urls)),
 ]
